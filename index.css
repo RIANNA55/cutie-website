@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3); 
+    padding: 30px;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.resume {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+}
+
+.left-column {
+    width: 40%;
+}
+
+.right-column {
+    width: 60%;
+}
+
+.left-column {
+    background: linear-gradient(135deg, #e1f5fe, #b3e5fc); 
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.right-column {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-direction: column;
+}
+
+.profile img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+    transition: box-shadow 0.3s ease;
+}
+
+.profile img:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+}
+
+h1 {
+    margin-top: 15px;
+    font-size: 28px;
+    color: #2c3e50;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+h1:hover {
+    color: #3498db; 
+    transform: scale(1.05); 
+}
+
+.role {
+    font-size: 18px;
+    color: #8e44ad;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.section {
+    margin-bottom: 25px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.section:hover {
+    background-color: #f3f8fc;
+    transform: scale(1.02);
+}
+
+.section h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 8px;
+}
+
+.section i {
+    margin-right: 10px;
+    color: #2980b9;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    margin-bottom: 12px;
+    color: #34495e;
+}
+
+.contact p, .languages p, .education p, .skills p {
+    font-size: 16px;
+    color: #34495e;
+}
+
+.progress {
+    margin-bottom: 15px;
+}
+
+.progress span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.progress-bar {
+    width: 0;
+    height: 12px;
+    background: linear-gradient(90deg, #2980b9, #8e44ad);
+    border-radius: 8px;
+    position: relative;
+    transition: width 2s ease;
+    color: white;
+    text-align: center;
+    line-height: 12px;
+    font-size: 12px;
+    animation: progress-animation 2s ease-in-out forwards;
+}
+
+@keyframes progress-animation {
+    0% {
+        width: 0%;
+    }
+}
+
+.progress:nth-child(1) .progress-bar {
+    animation-duration: 2s;
+}
+
+.progress:nth-child(2) .progress-bar {
+    animation-duration: 2.5s;
+}
+
+.progress:nth-child(3) .progress-bar {
+    animation-duration: 3s;
+}
+
+.progress:nth-child(4) .progress-bar {
+    animation-duration: 3.5s;
+}
+
+.progress:nth-child(5) .progress-bar {
+    animation-duration: 4s;
+}
+
+.button {
+    background-color: #8e44ad;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+    background-color: #9b59b6;
+    transform: scale(1.05);
+}
+
+ul li a {
+    text-decoration: none;
+    color: #2980b9;
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    color: #8e44ad;
+}
+
+.fab {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    background-color: #8e44ad;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 24px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.fab:hover {
+    background-color: #9b59b6;
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .resume {
+        flex-direction: column;
+    }
+
+    .left-column, .right-column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .fab {
+        right: 15px;
+        bottom: 15px;
+    }
+}
